@@ -1,0 +1,40 @@
+[user]
+    name = Raf Kaplon
+    email = raf.kaplon@youi.tv
+[core]
+    autocrlf = input
+    editor = "mvim -f"
+[alias]
+    a = "!git config -l | grep alias | cut -c 7-"
+    amend = commit --amend -C HEAD
+    br = branch
+    co = checkout
+    cp = cherry-pick
+    f = fetch
+    fa = fetch --all
+    find = "!git ls-files | grep -i"
+    ll = log --topo-order --pretty=format:'%C(cyan)%h%Creset -%C(yellow)%d%Creset %s %C(green)(%cr) %C(bold black)%an%Creset'
+    lg = log --branches --tags --remotes --graph --pretty=format:'%C(cyan)%h%Creset -%C(yellow)%d%Creset %s %C(green)(%cr) %C(bold black)%an%Creset'
+    rb = rebase
+    ss = show --stat=150,140
+    rl = reflog
+    s = status
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = true
+    ui = true
+[help]
+    format = html
+[rebase]
+    autosquash = true
+[difftool "gvimdiff"]
+    path = "mvim"
+[diff]
+    tool = gvimdiff
+[mergetool "gvimdiff"]
+    path = "mvim"
+    keepBackup = false
+[merge]
+    tool = gvimdiff
