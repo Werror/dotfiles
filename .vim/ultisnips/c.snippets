@@ -1,0 +1,98 @@
+
+global !p
+def indentVisual( snip ):
+    indent = int( snip.opt( '&shiftwidth', '4') )
+    for lineNumber, line in enumerate( snip.v.text.splitlines() ):
+        if lineNumber == 0:
+            snip.rv = snip.mkline( line.lstrip(), '' )
+        else:
+            snip.rv += "\n" + snip.mkline( line, ' ' * indent )
+    return
+endglobal
+
+snippet if "if"
+if(${1})
+{
+    ${2:`!p indentVisual( snip )`}
+}
+endsnippet
+
+snippet ei "else if"
+else if(${1})
+{
+    ${2:`!p indentVisual( snip )`}
+}
+endsnippet
+
+snippet el "else"
+else
+{
+    ${1:`!p indentVisual( snip )`}
+}
+endsnippet
+
+snippet for "for"
+for(${1})
+{
+    ${2:`!p indentVisual( snip )`}
+}
+endsnippet
+
+snippet wh "while"
+while(${1})
+{
+    ${2:`!p indentVisual( snip )`}
+}
+endsnippet
+
+snippet do "do while"
+do
+{
+    ${2:`!p indentVisual( snip )`}
+}
+while(${1})
+endsnippet
+
+snippet sw "switch"
+switch(${1})
+{
+	case ${2}:
+		break;
+	case ${3}:
+		break;
+	case ${4}:
+		break;
+	default:
+		break;
+}
+endsnippet
+
+snippet once "header guard"
+#ifndef ${1:`!p
+if not snip.c:
+	import string
+	name = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper()
+	snip.rv = name
+else:
+    snip.rv = snip.c`}
+#define $1
+
+${0:${VISUAL}}
+
+#endif // $1
+
+endsnippet
+
+snippet Inc "include header"
+#include "${1:`!p snip.rv = snip.basename + '.h'`}"
+endsnippet
+
+snippet inc "include other"
+#include <${1}>
+endsnippet
+
+snippet scope "scope"
+{
+    ${0:`!p indentVisual( snip )`}
+}
+endsnippet

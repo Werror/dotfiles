@@ -1,0 +1,116 @@
+
+global !p
+def indentVisual( snip ):
+    indent = int( snip.opt( '&shiftwidth', '4') )
+    for lineNumber, line in enumerate( snip.v.text.splitlines() ):
+        if lineNumber == 0:
+            snip.rv = snip.mkline( line.lstrip(), '' )
+        else:
+            snip.rv += "\n" + snip.mkline( line, ' ' * indent )
+    return
+endglobal
+
+snippet if "if"
+if (${1})
+{
+    ${2:`!p indentVisual( snip )`}
+}
+endsnippet
+
+snippet ei "else if"
+else if (${1})
+{
+    ${2:`!p indentVisual( snip )`}
+}
+endsnippet
+
+snippet el "else"
+else
+{
+    ${1:`!p indentVisual( snip )`}
+}
+endsnippet
+
+snippet for "for"
+for (${1})
+{
+    ${2:`!p indentVisual( snip )`}
+}
+endsnippet
+
+snippet wh "while"
+while (${1})
+{
+    ${2:`!p indentVisual( snip )`}
+}
+endsnippet
+
+snippet do "do while"
+do
+{
+    ${2:`!p indentVisual( snip )`}
+}
+while(${1});
+endsnippet
+
+snippet sw "switch"
+switch( ${1} )
+{
+case ${2}:
+    break;
+case ${3}:
+    break;
+default:
+    break;
+}
+endsnippet
+
+snippet inc "import header"
+#import "${1:`!p snip.rv = snip.basename + '.h'`}"
+endsnippet
+
+snippet Inc "import header"
+#import <${1:`!p snip.rv = snip.basename + '.h'`}>
+endsnippet
+
+snippet scope "scope"
+{
+    ${0:`!p indentVisual( snip )`}
+}
+endsnippet
+
+snippet prot "protocol"
+@protocol ${1:`!p snip.rv = snip.basename or "name"`} <${2:NSObject}>
+
+$0
+
+@end
+endsnippet
+
+snippet int "interface"
+@interface ${1:`!p snip.rv = snip.basename or "name"`}
+
+$0
+
+@end
+endsnippet
+
+snippet imp "implementation"
+@implementation ${1:`!p snip.rv = snip.basename or "name"`}
+
+$0
+
+@end
+endsnippet
+
+snippet prop "property"
+@property (${1:strong, nonatomic}) ${2:NSObject} *${3:name};
+endsnippet
+
+snippet once "dispatch once"
+static dispatch_once_t onceToken;
+dispatch_once(&onceToken,
+^{
+	$0
+});
+endsnippet

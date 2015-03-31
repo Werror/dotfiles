@@ -1,0 +1,42 @@
+extends c
+
+global !p
+def indentVisual( snip ):
+    indent = int( snip.opt( '&shiftwidth', '4') )
+    for lineNumber, line in enumerate( snip.v.text.splitlines() ):
+        if lineNumber == 0:
+            snip.rv = snip.mkline( line.lstrip(), '' )
+        else:
+            snip.rv += "\n" + snip.mkline( line, ' ' * indent )
+    return
+endglobal
+
+snippet ns "namespace"
+namespace${1/.+/ /m}${1:`!p snip.rv = snip.basename or "name"`}
+{
+    ${2:`!p indentVisual( snip )`}
+}
+endsnippet
+
+snippet us "using namespace"
+using namespace $1
+endsnippet
+
+snippet tm "template"
+template<typename ${1:Type}>
+endsnippet
+
+snippet cl "class"
+class ${1:`!p snip.rv = snip.basename or "name"`}
+{
+
+public:
+	${1/(\w+).*/$1/}($0);
+	virtual ~${1/(\w+).*/$1/}();
+
+private:
+    ${1/(\w+).*/$1/}(const ${1/(\w+).*/$1/} &);
+    ${1/(\w+).*/$1/} &operator=(const ${1/(\w+).*/$1/} &);
+
+};
+endsnippet

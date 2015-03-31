@@ -1,0 +1,92 @@
+[submodule ".vim/bundle/UltiSnips"]
+	path = .vim/bundle/UltiSnips
+	url = https://github.com/SirVer/ultisnips.git
+	ignore = dirty
+[submodule ".vim/bundle/Numbers"]
+	path = .vim/bundle/Numbers
+	url = https://github.com/myusuf3/numbers.vim.git
+	ignore = dirty
+[submodule ".vim/bundle/NerdTree"]
+	path = .vim/bundle/NerdTree
+	url = https://github.com/scrooloose/nerdtree.git
+	ignore = dirty
+[submodule ".vim/bundle/CommandT"]
+	path = .vim/bundle/CommandT
+	url = https://github.com/wincent/command-t.git 
+	ignore = dirty
+[submodule ".vim/bundle/Fugitive"]
+	path = .vim/bundle/Fugitive
+	url = https://github.com/rafkaplon/vim-fugitive.git
+	ignore = dirty
+[submodule ".vim/bundle/Markdown"]
+	path = .vim/bundle/Markdown
+	url = https://github.com/tpope/vim-markdown.git
+	ignore = dirty
+[submodule ".vim/bundle/AutoPairs"]
+	path = .vim/bundle/AutoPairs
+	url = https://github.com/jiangmiao/auto-pairs.git
+	ignore = dirty
+[submodule ".vim/bundle/Surround"]
+	path = .vim/bundle/Surround
+	url = https://github.com/tpope/vim-surround.git
+	ignore = dirty
+[submodule ".vim/bundle/EasyMotion"]
+	path = .vim/bundle/EasyMotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
+	ignore = dirty
+[submodule ".vim/bundle/Repeat"]
+	path = .vim/bundle/Repeat
+	url = https://github.com/tpope/vim-repeat.git
+	ignore = dirty
+[submodule ".vim/bundle/YouCompleteMe"]
+	path = .vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+	ignore = dirty
+[submodule ".vim/bundle/Airline"]
+	path = .vim/bundle/Airline
+	url = https://github.com/bling/vim-airline.git
+	ignore = dirty
+[submodule ".vim/bundle/Ack"]
+	path = .vim/bundle/Ack
+	url = https://github.com/mileszs/ack.vim.git
+	ignore = dirty
+[submodule ".vim/bundle/Unimpaired"]
+	path = .vim/bundle/Unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
+	ignore = dirty
+[submodule ".vim/bundle/FSwitch"]
+	path = .vim/bundle/FSwitch
+	url = https://github.com/derekwyatt/vim-fswitch.git
+	ignore = dirty
+[submodule ".vim/bundle/SmartPairs"]
+	path = .vim/bundle/SmartPairs
+	url = https://github.com/gorkunov/smartpairs.vim.git
+	ignore = dirty
+[submodule ".vim/bundle/TComment"]
+	path = .vim/bundle/TComment
+	url = https://github.com/vim-scripts/tComment.git
+	ignore = dirty
+[submodule ".vim/bundle/ListToggle"]
+	path = .vim/bundle/ListToggle
+	url = https://github.com/Valloric/ListToggle.git
+	ignore = dirty
+[submodule ".vim/bundle/Abolish"]
+	path = .vim/bundle/Abolish
+	url = https://github.com/tpope/vim-abolish.git
+	ignore = dirty
+[submodule ".vim/bundle/BufOnly"]
+	path = .vim/bundle/BufOnly
+	url = https://github.com/vim-scripts/BufOnly.vim.git
+	ignore = dirty
+[submodule ".vim/bundle/BufKill"]
+	path = .vim/bundle/BufKill
+	url = https://github.com/vim-scripts/bufkill.vim.git
+	ignore = dirty
+[submodule ".vim/bundle/LocalVimrc"]
+	path = .vim/bundle/LocalVimrc
+	url = https://github.com/embear/vim-localvimrc.git
+	ignore = dirty
+[submodule ".vim/bundle/Cpp"]
+	path = .vim/bundle/Cpp
+	url = https://github.com/vim-jp/vim-cpp.git
+	ignore = dirty
