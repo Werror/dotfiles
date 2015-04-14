@@ -2,7 +2,9 @@
 export PATH=/usr/local/git/bin:$PATH
 
 # General
-alias ll="ls -l"
+alias ll='ls -l'
+alias vi='mvim -v'
+alias vim='mvim -v'
 
 # Git prompt
 source /usr/local/git/contrib/completion/git-prompt.sh
