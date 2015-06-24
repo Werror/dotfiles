@@ -21,6 +21,7 @@
     pu = push
     rb = rebase
     ss = show --stat=150,140
+    sf = "!f(){ git show --pretty='format:' --name-only $* | grep -v '^$' | sort | uniq; }; f"
     rl = reflog
     s = status
 [color]
