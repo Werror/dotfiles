@@ -67,6 +67,24 @@ switch (${1})
 }
 endsnippet
 
+snippet #if "preprocessor if"
+#if ${1}
+    ${0:`!p indentVisual( snip )`}
+#endif
+endsnippet
+
+snippet #ifdef "preprocessor ifdef"
+#ifdef ${1}
+    ${0:`!p indentVisual( snip )`}
+#endif
+endsnippet
+
+snippet #ifndef "preprocessor ifndef"
+#ifndef ${1}
+    ${0:`!p indentVisual( snip )`}
+#endif
+endsnippet
+
 snippet once "header guard"
 #ifndef ${1:`!p
 if not snip.c:
