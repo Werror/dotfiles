@@ -90,3 +90,9 @@
 	path = vim/bundle/Cpp
 	url = https://github.com/vim-jp/vim-cpp.git
 	ignore = dirty
+[submodule "vim/bundle/Dispatch"]
+	path = vim/bundle/Dispatch
+	url = https://github.com/tpope/vim-dispatch
+[submodule "vim/bundle/Ferret"]
+	path = vim/bundle/Ferret
+	url = https://github.com/wincent/ferret

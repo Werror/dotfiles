@@ -280,6 +280,16 @@ nmap <Leader>s <Plug>(easymotion-sn)
 
 " }}}
 
+" {{{ Plugin: Ferret
+
+let g:FerretMap = 0
+let g:FerretQFCommands = 0
+
+nnoremap <Leader>ag :Ack -w --literal <C-r><C-w><CR>
+vnoremap <Leader>ag y:Ack --literal <C-r>"<CR>
+
+" }}}
+
 " {{{ Plugin: FSwitch
 
 nnoremap <silent> <Leader>oo :FSHere<cr>
