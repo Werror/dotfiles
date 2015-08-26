@@ -56,8 +56,9 @@ nnoremap <silent> <C-h> :wincmd h<CR>
 nnoremap <silent> <C-j> :wincmd j<CR>
 nnoremap <silent> <C-k> :wincmd k<CR>
 nnoremap <silent> <C-l> :wincmd l<CR>
-nnoremap <silent> <C-Left> :bn<CR>
-nnoremap <silent> <C-Right> :bp<CR>
+nnoremap <silent> <C-q> <C-w>c
+
+autocmd BufReadPost quickfix nnoremap <buffer> q <C-w>q
 
 " }}}
 
@@ -269,14 +270,25 @@ let g:DoxygenToolkit_interCommentBlock = ''
 let g:DoxygenToolkit_compactOneLineDoc = 'no'
 let g:DoxygenToolkit_compactDoc = 'yes'
 
-map <Leader>x :Dox<CR>
+nnoremap <Leader>x :Dox<CR>
 
 " }}}
 
 " {{{ Plugin: EasyMotion
 
-map <Leader> <Plug>(easymotion-prefix)
+let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_smartcase = 1
+let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
+
+nmap / <Plug>(easymotion-sn)
 nmap <Leader>s <Plug>(easymotion-sn)
+nmap <Leader>c <Plug>(easymotion-f)
+nmap <Leader>w <Plug>(easymotion-w)
+nmap <Leader>W <Plug>(easymotion-W)
+nmap <Leader>b <Plug>(easymotion-b)
+nmap <Leader>B <Plug>(easymotion-B)
+nmap <Leader>j <Plug>(easymotion-j)
+nmap <Leader>k <Plug>(easymotion-k)
 
 " }}}
 
