@@ -191,7 +191,7 @@ endfunction
 " {{{ Vim: Miscellaneous
 
 " Map control tab to swtich the next buffer.
-map <C-Tab> :b#<CR>
+nnoremap <C-Tab> :b#<CR>
 
 " Change to directory of opened file.
 command! CD cd %:p:h
@@ -200,10 +200,10 @@ command! CD cd %:p:h
 nnoremap <silent> * :let @/ = '\C\<\(<C-R>=expand("<cword>")<CR>\)\>'<CR>:set hls<CR>
 
 " Refactoring of the word under the cursor.
-map rf *:%s/<C-R>///gc<left><left><left>
+nnoremap rf *:%s/<C-R>///gc<Left><Left><Left>
 
 " Clear search
-map <silent> <C-C> :let @/ = ''<CR>
+nnoremap <silent> <C-c> :let @/ = ''<CR>
 
 " }}}
 
@@ -228,7 +228,7 @@ autocmd VimEnter * AlignCtrl Ilp1P0=
 
 " {{{ Plugin: BufOnly
 
-map <F4> :BufOnly<CR>:bd <CR>
+nnoremap <F4> :BufOnly<CR>:bd <CR>
 
 " }}}
 
@@ -241,8 +241,8 @@ let g:CommandTMatchWindowReverse = 1
 let g:CommandTTraverseSCM = 'pwd'
 let g:CommandTFileScanner = 'watchman'
 
-nnoremap <silent> <C-space> :CommandT<CR>
-nnoremap <silent> <S-space> :CommandTBuffer<CR>
+nnoremap <silent> <C-Space> :CommandT<CR>
+nnoremap <silent> <S-Space> :CommandTBuffer<CR>
 
 " }}}
 
@@ -304,15 +304,15 @@ vnoremap <Leader>ag y:Ack --literal <C-r>"<CR>
 
 " {{{ Plugin: FSwitch
 
-nnoremap <silent> <Leader>oo :FSHere<cr>
-nnoremap <silent> <Leader>ol :FSRight<cr>
-nnoremap <silent> <Leader>oL :FSSplitRight<cr>
-nnoremap <silent> <Leader>oh :FSLeft<cr>
-nnoremap <silent> <Leader>oH :FSSplitLeft<cr>
-nnoremap <silent> <Leader>ok :FSAbove<cr>
-nnoremap <silent> <Leader>oK :FSSplitAbove<cr>
-nnoremap <silent> <Leader>oj :FSBelow<cr>
-nnoremap <silent> <Leader>oJ :FSSplitBelow<cr>
+nnoremap <silent> <Leader>oo :FSHere<CR>
+nnoremap <silent> <Leader>ol :FSRight<CR>
+nnoremap <silent> <Leader>oL :FSSplitRight<CR>
+nnoremap <silent> <Leader>oh :FSLeft<CR>
+nnoremap <silent> <Leader>oH :FSSplitLeft<CR>
+nnoremap <silent> <Leader>ok :FSAbove<CR>
+nnoremap <silent> <Leader>oK :FSSplitAbove<CR>
+nnoremap <silent> <Leader>oj :FSBelow<CR>
+nnoremap <silent> <Leader>oJ :FSSplitBelow<CR>
 
 " }}}
 
@@ -320,15 +320,15 @@ nnoremap <silent> <Leader>oJ :FSSplitBelow<cr>
 "
 set previewheight=25
 
-nnoremap <silent> <leader>gs :Gstatus<CR>
-nnoremap <silent> <leader>gd :Gdiff<CR>
-nnoremap <silent> <leader>gb :Gblame<CR>
-nnoremap <silent> <leader>gw :Gwrite<CR>
-nnoremap <silent> <leader>gr :Gread<CR>
-nnoremap <silent> <leader>gl :Glog<CR>
-nnoremap <silent> <leader>gc :Gcommit<CR>
+nnoremap <silent> <Leader>gs :Gstatus<CR>
+nnoremap <silent> <Leader>gd :Gdiff<CR>
+nnoremap <silent> <Leader>gb :Gblame<CR>
+nnoremap <silent> <Leader>gw :Gwrite<CR>
+nnoremap <silent> <Leader>gr :Gread<CR>
+nnoremap <silent> <Leader>gl :Glog<CR>
+nnoremap <silent> <Leader>gc :Gcommit<CR>
 
-vnoremap <silent> <leader>gl :Glog<CR>
+vnoremap <silent> <Leader>gl :Glog<CR>
 
 " }}}
 
@@ -349,7 +349,7 @@ let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeMapJumpNextSibling = ''
 let g:NERDTreeMapJumpPrevSibling = ''
 nnoremap <F1> :NERDTreeToggle<CR>
-nnoremap <C-F> :NERDTreeFind<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 
 " Close vim if the only window left open is NERDTree
 autocmd bufenter * if (winnr('$') == 1 && exists('b:NERDTreeType') && b:NERDTreeType == 'primary') | q | endif
@@ -373,7 +373,7 @@ let g:UltiSnipsSnippetDirectories = ['ultisnips']
 
 let g:ycm_confirm_extra_conf = 0
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
-nnoremap <silent> <leader>gt :YcmCompleter GoTo<CR>
-nnoremap <silent> <leader>gr :YcmCompleter GetType<CR>
+nnoremap <silent> <Leader>gt :YcmCompleter GoTo<CR>
+nnoremap <silent> <Leader>gr :YcmCompleter GetType<CR>
 
 " }}}
