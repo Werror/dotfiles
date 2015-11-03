@@ -46,10 +46,6 @@
 	path = vim/bundle/Airline
 	url = https://github.com/bling/vim-airline.git
 	ignore = dirty
-[submodule "vim/bundle/Ack"]
-	path = vim/bundle/Ack
-	url = https://github.com/mileszs/ack.vim.git
-	ignore = dirty
 [submodule "vim/bundle/Unimpaired"]
 	path = vim/bundle/Unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
