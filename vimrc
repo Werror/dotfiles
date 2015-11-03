@@ -177,17 +177,6 @@ set completeopt=menu
 
 " }}}
 
-" {{{ Vim: Quickfix
-
-" Adjust the height of the error window based on the number of errors shown.
-" The function below takes minimum and maximum window heights as arguments.
-au FileType qf call AdjustWindowHeight(1, 25)
-function! AdjustWindowHeight(minheight, maxheight)
-  exe max([min([line('$'), a:maxheight]), a:minheight]) . 'wincmd _'
-endfunction
-
-" }}}
-
 " {{{ Vim: Miscellaneous
 
 " Map control tab to swtich the next buffer.
@@ -228,7 +217,7 @@ autocmd VimEnter * AlignCtrl Ilp1P0=
 
 " {{{ Plugin: BufOnly
 
-nnoremap <F4> :BufOnly<CR>:bd <CR>
+nnoremap <F4> :BufOnly<CR>:bd!<CR>
 
 " }}}
 
@@ -297,8 +286,8 @@ nmap <Leader>k <Plug>(easymotion-k)
 let g:FerretMap = 0
 let g:FerretQFCommands = 0
 
-nnoremap <Leader>ag :Ack -w --literal <C-r><C-w><CR>
-vnoremap <Leader>ag y:Ack --literal <C-r>"<CR>
+nnoremap <Leader>a :Ack -w --literal <C-r><C-w><CR>
+vnoremap <Leader>a y:Ack --literal <C-r>"<CR>
 
 " }}}
 
