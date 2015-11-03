@@ -3,6 +3,8 @@ export PATH=/usr/local/git/bin:$PATH
 
 # General
 alias ll='ls -l'
+alias po=popd
+alias pu=pushd
 alias vi='mvim -v'
 alias vim='mvim -v'
 
@@ -14,6 +16,9 @@ export PROMPT_COMMAND='__git_ps1 "\u \w" "\\\$ "'
 
 # Git completion
 source /usr/local/git/contrib/completion/git-completion.bash
+
+# Java
+export JAVA_HOME=`/usr/libexec/java_home`
 
 # NVPACK
 export PATH="$PATH:/Users/raf/Tools/NVPACK/android-sdk-macosx/platform-tools"
