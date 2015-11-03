@@ -8,6 +8,7 @@
     a = "!git config -l | grep alias | cut -c 7-"
     amend = commit --amend -C HEAD
     br = branch
+    brd = "!f(){ b=$1; if git branch | grep -q $b; then if ! git rev-parse --abbrev-ref --symbolic-full-name $b@{u} 2>&1 | grep -q fatal; then git push --delete fork $b; fi; git branch -D $b; fi }; f"
     cm = commit
     co = checkout
     cp = cherry-pick
